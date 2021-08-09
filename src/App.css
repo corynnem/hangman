@@ -1,5 +1,10 @@
+body {
+  background-color: #E8E288;
+}
+
 .App {
   text-align: center;
+  font-family: 'Indie Flower', cursive;
 }
 
 .App-logo {

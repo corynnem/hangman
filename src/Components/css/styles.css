@@ -1,0 +1,6 @@
+input {  caret-color: black;  }
+
+input::placeholder {
+    color: #FF8360;
+    opacity: 1;
+  }
