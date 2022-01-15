@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Guesses from "./Guesses";
 import Alphabet from "./Alphabet";
 import styles from "./css/styles";
+// import './css/styles.css'
 
 class Data extends Component {
   constructor() {

@@ -3,12 +3,13 @@ import styles from "./css/styles";
 
 const Guesses = ({ wordData, guess }) => {
 
+  console.log(wordData.word)
 
   return (
     <div style={styles.guessDiv}>
       <h1 id="def">{wordData.set === true ? wordData.definition : ""}</h1>
       <div style={styles.guessDiv}>
-        {wordData.set
+        {wordData.set && wordData.word.length > 0
           ? wordData.word.map((letter, i) => {
               return (
                 <div
