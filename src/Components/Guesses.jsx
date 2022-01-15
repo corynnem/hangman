@@ -3,8 +3,6 @@ import styles from "./css/styles";
 
 const Guesses = ({ wordData, guess }) => {
 
-  console.log(wordData.word)
-
   return (
     <div style={styles.guessDiv}>
       <h1 id="def">{wordData.set === true ? wordData.definition : ""}</h1>
