@@ -99,9 +99,20 @@ class Data extends Component {
     }
   };
 
-  guess = (value, placeholder, i) => {
+  guess = (value, placeholder, i, e) => {
     let answer = document.getElementsByClassName("answer");
-    if (value === placeholder) {
+    let question = document.querySelectorAll('.question')
+  
+    if (e.keyCode === 13) {
+      let word = this.state.wordData.word.join('')
+
+      if(question[i].placeholder === word[word.length-1]) {
+        question[0].focus()
+      } else {
+        question[i + 1].focus()
+      }
+     
+  } else if(value === placeholder) {
       let final = [];
       answer[i].innerText = value;
 
@@ -109,8 +120,8 @@ class Data extends Component {
         final.push(a.innerText);
         final = final.filter((letter) => letter !== "");
       }
-
-      if (final.length === this.state.wordData.word.length) {
+      
+      if (final.length === this.state.wordData.word.length && e.keyCode !== 8) {
         this.setState({
           wordData: {
             word: this.state.wordData.word,
@@ -140,7 +151,9 @@ class Data extends Component {
           });
         }, 3000);
       }
-    } else {
+    } else if(e.keyCode === 8) {
+      return
+    }else {
       let stateLives = this.state.lives
       this.setState({
         lives: (stateLives -= 1),
@@ -171,5 +184,3 @@ class Data extends Component {
 }
 
 export default Data;
-
-git c

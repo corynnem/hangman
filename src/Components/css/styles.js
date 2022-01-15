@@ -37,7 +37,7 @@ const alphabetDiv = {
     display: "flex",
     justifyContent: "center",
     flexWrap: "wrap",
-    marginLeft: "10%",
+    marginLeft: "5%",
     marginTop: "5%",
 }
 

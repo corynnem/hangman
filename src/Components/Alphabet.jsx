@@ -38,17 +38,17 @@ const Alphabet = ({ state, guess, setCurrentLetter }) => {
   const checkLetter = (e) => {
     let question = document.getElementsByClassName("question");
     let letter = e.target.value;
-
     setCurrentLetter(letter);
+
     for (let i = 0; i < 1; i++) {
-      if (inputs < question.length) {
+       if (inputs < question.length ) {
         question[inputs].value = letter;
         setInputs(inputs + 1);
-        guess(letter, question[inputs].placeholder, inputs);
+        guess(letter, question[inputs].placeholder, inputs, e);
       } else if (inputs === question.length) {
         question[0].value = letter;
         setInputs(0);
-        guess(letter, question[0].placeholder, 0);
+        guess(letter, question[0].placeholder, 0, e);
       }
     }
   };

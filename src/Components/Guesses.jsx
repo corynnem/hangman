@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./css/styles";
 
 const Guesses = ({ wordData, guess }) => {
+
+
   return (
     <div style={styles.guessDiv}>
       <h1 id="def">{wordData.set === true ? wordData.definition : ""}</h1>
@@ -21,8 +23,8 @@ const Guesses = ({ wordData, guess }) => {
                     style={styles.input}
                     className="question"
                     placeholder={letter}
-                    onChange={(e) =>
-                      guess(e.target.value, e.target.placeholder, i)
+                    onKeyUp={(e) =>
+                      guess(e.target.value, e.target.placeholder, i, e)
                     }
                   />
                   <br />
