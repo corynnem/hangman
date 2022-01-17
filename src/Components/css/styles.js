@@ -2,8 +2,8 @@
 const button = {
     backgroundColor: "#F3E9D2",
     border: ".5px black solid",
-    height: "4vh",
-    width: "7vh",
+    height: "30px",
+    width: "80px",
     borderRadius: "5px",
     fontFamily: "Indie Flower",
     fontSize: "2.5vh",
@@ -39,6 +39,7 @@ const alphabetDiv = {
     flexWrap: "wrap",
     marginLeft: "5%",
     marginTop: "5%",
+    color: 'black'
 }
 
 
@@ -56,8 +57,8 @@ const alphabet = {
 const input = {
     backgroundColor: "#FF8360",
     border: ".5px black solid",
-    height: "4vh",
-    width: "2em",
+    height: "30px",
+    width: "30px",
     borderRadius: "5px",
     fontFamily: "Indie Flower",
     fontSize: "2.5vh",
